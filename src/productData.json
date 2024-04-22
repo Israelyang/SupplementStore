@@ -1,0 +1,39 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "productName": "Strawberry Pre-workout",
+        "description": "Energize your workout with the refreshing kick of our Strawberry Preworkout, packed with natural flavors and the power to fuel your fitness journey!",
+        "price": "41.99",
+        "imageUrl": "https://rysnfenix.com/cdn/shop/files/SCORCHEDEARTH_5.png?v=1698544881&width=1214"
+      },
+      {
+        "id": 2,
+        "productName": "Chocolate Protein Powder",
+        "description": "Indulge in the rich taste of our Chocolate Protein Powder, the delicious way to fuel your muscles and recover faster after every workout!",
+        "price": "49.99",
+        "imageUrl": "https://m.media-amazon.com/images/I/71t1n8cedBL._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "id": 3,
+        "productName": "Vanilla Collagen Protein Powder",
+        "description": "Transform your routine with our Vanilla Collagen Protein Powder, crafted to support your beauty and strength from within, making every sip a step closer to radiant health!",
+        "price": "53.99",
+        "imageUrl": "https://myvillagegreen.com/cdn/shop/products/Bulletproof-Collagen-Protein-Vanilla-815709024406_1280x.webp?v=1665586426"
+      },
+      {
+        "id": 4,
+        "productName": "Creatine",
+        "description": "Unlock your full potential with our Creatine, the essential supplement for maximizing strength, power, and muscle gains, ensuring you crush your fitness goals with every rep!",
+        "price": "34.99",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-EFRUGcXftF_JFKwH_YjHeUR0rYHQzZP0gQ&s"
+      },
+      {
+      "id": 5,
+        "productName": "Blue Raspberry Electrolyte",
+        "description": "Revitalize and replenish with the refreshing taste of our Blue Raspberry Electrolyte, the perfect blend to keep you hydrated and energized throughout your active day, so you can perform at your best, naturally!",
+        "price": "39.99",
+        "imageUrl": "https://www.twenty2nutrition.com/cdn/shop/products/Electrolytes-BlueRaspberry-Front_360x.jpg?v=1688588389"
+      }
+    ]
+  }
