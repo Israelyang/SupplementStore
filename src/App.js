@@ -1,18 +1,29 @@
-import React from 'react';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Home'
+import ProductList from './ProductList'
+import Product from './Product'
+import ProductForm from './ProductForm';
+import About from './About';
+import HomeProducts from './HomeProducts';
+import Footer from './Footer';
 
 function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route index element={<HomeProducts />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<ProductList />} />
+            <Route path="products/add" element={<ProductForm />} />
+            <Route path="products/:id/edit" element={<ProductForm />} />
+            <Route path="products/:id" element={<Product />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

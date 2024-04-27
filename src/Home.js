@@ -5,15 +5,20 @@ import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 
 function Home() {
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
+          <Navbar.Brand>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4p9-fC1kYw7cEZDkUWu2GTD77PDYE7RlaRA&s" alt="Logo" style={{width: '65px', height: '65px'}}></img>
+          </Navbar.Brand>
+          <Navbar.Brand>Litness</Navbar.Brand>
           <Nav className="me-auto">
             <Link to="/" className="nav-link">Home</Link>
-            <Link to="/products" className="nav-link">About Us</Link>
-            <Link to="/products/new" className="nav-link">Products</Link>
-            <Link to="/products/new" className="nav-link">Create new product</Link>
+            <Link to="/about" className="nav-link">About</Link>
+            <Link to="/products" className="nav-link">Products</Link>
+            <Link to="/products/add" className="nav-link">Add Product</Link>
           </Nav>
           <Navbar.Text>
           </Navbar.Text>
