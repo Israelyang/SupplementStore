@@ -66,8 +66,8 @@ function ProductList() {
             <h1>Products</h1>
             <Container>
                 <Row>
-                    <Col xs={12} md={6}>
-                        <Form className="mb-3" style={{width: '300px'}}>
+                    <Col>
+                        <Form className="mb-3">
                             <FormControl
                                 type="text"
                                 placeholder="Search by product name"
@@ -76,16 +76,16 @@ function ProductList() {
                             />
                         </Form>
                     </Col>
-                    <Col xs={12} md={6} className="d-flex justify-content-end">
+                    <Col className="d-flex justify-content-end">
                         <Form className="mb-3" style={{ textAlign: 'right' }}>
-                            <Form.Select onChange={handleSortChange} style={{width: 'auto', marginRight: '10px' }}>
+                            <Form.Select onChange={handleSortChange} style={{ width: 'auto', marginRight: '10px' }}>
                                 <option value="">Default</option>
                                 <option value="price">Sort by Price</option>
-                                <option value="name">Sort by Name</option> {/* New sorting option */}
+                                <option value="name">Sort by Name</option>
                             </Form.Select>
                         </Form>
-                        <Form className="mb-3" style={{ textAlign: 'right'}}>
-                            <Form.Select onChange={handlePriceFilterChange} style={{width: 'auto'}}>
+                        <Form className="mb-3" style={{ textAlign: 'right' }}>
+                            <Form.Select onChange={handlePriceFilterChange} style={{ width: 'auto' }}>
                                 <option value="">All Prices</option>
                                 <option value="10-20">$10 - $20</option>
                                 <option value="20-30">$20 - $30</option>
@@ -96,30 +96,34 @@ function ProductList() {
                 </Row>
             </Container>
             <Container>
-                <Row xs={1} md={2} lg={3} className="g-4">
-                    {sortedProducts.map(product => (
-                        <Col key={product.id}>
-                            <Card className="h-100">
-                                <Card.Img variant="top" src={product.imageUrl} />
-                                <Card.Body>
-                                    <Card.Title>{product.productName}</Card.Title>
-                                    <Card.Text>${product.price}</Card.Text>
-                                    <Link to={`/products/${product.id}`} className="btn btn-secondary mx-1">
-                                        View
-                                    </Link>
-                                    <Link to={`/products/${product.id}/edit`} className="btn btn-primary mx-3">
-                                        Edit
-                                    </Link>
-                                    <Button
-                                        variant="danger"
-                                        onClick={() => deleteProduct(product.id)}
-                                    >
-                                        Delete
-                                    </Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
+                <Row>
+                    <Col>
+                        <Row xs={2} md={3} lg={4} className="g-4">
+                            {sortedProducts.map(product => (
+                                <Col key={product.id} style={{paddingBottom: '50px'}}>
+                                    <Card className="h-100">
+                                        <Card.Img variant="top" src={product.imageUrl} />
+                                        <Card.Body>
+                                            <Card.Title>{product.productName}</Card.Title>
+                                            <Card.Text>${product.price}</Card.Text>
+                                            <Link to={`/products/${product.id}`} className="btn btn-secondary mx-1">
+                                                View
+                                            </Link>
+                                            <Link to={`/products/${product.id}/edit`} className="btn btn-primary mx-3">
+                                                Edit
+                                            </Link>
+                                            <Button
+                                                variant="danger"
+                                                onClick={() => deleteProduct(product.id)}
+                                            >
+                                                Delete
+                                            </Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            ))}
+                        </Row>
+                    </Col>
                 </Row>
             </Container>
         </>

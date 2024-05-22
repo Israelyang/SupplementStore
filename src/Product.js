@@ -41,9 +41,9 @@ function Product() {
     const { productName, description, price, imageUrl } = product;
 
     return (
-        <Card className="align-self-start w-50 m-auto">
+        <Card className="align-self-start w-50 m-auto" style={{paddingBottom: '60px'}}>
             <Card.Img variant="top" src={imageUrl} />
-            <Card.Body>
+            <Card.Body >
                 <Card.Title>{productName}</Card.Title>
                 <Card.Subtitle>${price}</Card.Subtitle>
                 <p>{description}</p>

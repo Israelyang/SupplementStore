@@ -57,7 +57,7 @@ function HomeProducts(props) {
             {({ products }) => (
                 <Row xs={1} md={2} lg={3} className="g-4">
                 {products.slice(1,4).map(product => (
-                    <Col key={product.id}>
+                    <Col key={product.id} xs={12} sm={6} md={4} lg={3}>
                         <Card className="h-100">
                             <Card.Img variant="top" src={product.imageUrl} />
                             <Card.Body>
